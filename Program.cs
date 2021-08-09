@@ -1,4 +1,5 @@
 ﻿using System;
+using BenchmarkDotNet.Running;
 
 namespace SimpleStackBenchmark
 {
@@ -6,7 +7,7 @@ namespace SimpleStackBenchmark
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BenchmarkRunner.Run<StackBenchmarks>();
         }
     }
 }
