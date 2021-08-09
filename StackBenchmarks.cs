@@ -1,7 +1,10 @@
 using System.Collections;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Order;
 
 [MemoryDiagnoser]
+[Orderer(SummaryOrderPolicy.FastestToSlowest)]
+[RankColumn]
 public class StackBenchmarks
 {
     private static readonly DoubleStack testStack = new DoubleStack(null);
