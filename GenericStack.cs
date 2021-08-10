@@ -1,9 +1,9 @@
-public class Stack<T>
+public class GenericStack<T>
 {
     private T[] stack;
     private const int DEFAULT_SIZE = 10;
     private int stackIndex = -1;
-    public Stack(int? size)
+    public GenericStack(int? size)
     {
         int stackSize = size ?? DEFAULT_SIZE;
         stack = new T[stackSize];
