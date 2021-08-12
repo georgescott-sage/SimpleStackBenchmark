@@ -12,6 +12,8 @@ public class StackBenchmarks
     private static readonly Stack testStackDotnet = new Stack();
     private static readonly Stack<double> testGenericStackDotnet = new Stack<double>();
     private static readonly GenericStack<double> genericStack = new GenericStack<double>(null);
+    private static readonly ObjectStack objectStack = new ObjectStack(null);
+
 
     [Benchmark]
     public void PushPopDoubleStack()
@@ -40,12 +42,21 @@ public class StackBenchmarks
         testGenericStackDotnet.Pop();
     }
 
-     [Benchmark]
+    [Benchmark]
     public void GenericStackImplementation()
     {
         genericStack.Push(1.1);
         genericStack.Push(1.1);
         genericStack.Pop();
         genericStack.Pop();
+    }
+
+    [Benchmark]
+    public void ObjectStackImplementation()
+    {
+        objectStack.Push(1.1);
+        objectStack.Push(1.1);
+        objectStack.Pop();
+        objectStack.Pop();
     }
 }
