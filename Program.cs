@@ -1,5 +1,6 @@
 ﻿using System;
 using BenchmarkDotNet.Running;
+using SimpleStackBenchmark.Implemenations.StringIsNumber;
 
 namespace SimpleStackBenchmark
 {
@@ -7,7 +8,8 @@ namespace SimpleStackBenchmark
     {
         static void Main(string[] args)
         {
-            BenchmarkRunner.Run<StackBenchmarks>();
+            // BenchmarkRunner.Run<StackBenchmarks>();
+            // BenchmarkRunner.Run<StringIsNumberBenchmarks>();
         }
     }
 }
